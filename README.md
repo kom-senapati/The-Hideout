@@ -5,7 +5,7 @@ Welcome to the Hideout, a place for people to come and hang out, talk about.
 ## How to run:
 
 ```bash
-git clone link
+git clone https://github.com/KOMNOOB/The-Hideout.git
 cd hideout
 python main.py
 ```
