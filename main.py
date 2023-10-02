@@ -2,6 +2,44 @@ from tkinter import *
 from sqlite import add_order
 # Confirm window
 
+# Constants for Colors
+WHITE = "#FFFFFF"
+BLACK = "#000000"
+RED = "#FF0000"
+GREEN = "#00FF00"
+BLUE = "#0000FF"
+CNFRMCOL = "#F6D6B1"
+ORDCOL="#B47950"
+ORDENTRY="#C4C4C4"
+CONCOL="#f4fbfd"
+
+# Directory path where the images are located
+IMAGE_DIRECTORY = r"Images\\"
+
+#constants for Home page buttons
+#About us button
+ABT_WIDTH = 219
+ABT_HEIGHT = 62
+
+#ORDER NOW button
+ORD_HEIGHT = 62
+ORD_WIDTH = 267
+
+# Constants for Other Button Sizes
+BUTTON_WIDTH = 153
+BUTTON_HEIGHT = 53
+
+# Constants for Image Paths
+
+# To set the background color of a button
+button_color = GREEN
+
+# To set the size of a button
+btn0 = (BUTTON_WIDTH, BUTTON_HEIGHT)
+
+
+
+
 
 def confirm():
 
@@ -25,10 +63,10 @@ def confirm():
     confirm_window = Toplevel()
     confirm_window.title("Confirm")
     confirm_window.geometry("821x525")
-    confirm_window.configure(bg="#ffffff")
+    confirm_window.configure(bg=WHITE)
     canvas = Canvas(
         confirm_window,
-        bg="#ffffff",
+        bg=WHITE,
         height=525,
         width=821,
         bd=0,
@@ -38,7 +76,7 @@ def confirm():
 
     entry0 = Entry(confirm_window,
                    bd=0,
-                   bg="#F6D6B1",
+                   bg=CNFRMCOL,
                    font=("Fira Code", 20))
     entry0.place(
         x=416.5, y=173,
@@ -47,7 +85,7 @@ def confirm():
 
     entry1 = Entry(confirm_window,
                    bd=0,
-                   bg="#F6D6B1",
+                   bg=CNFRMCOL,
                    font=("Fira Code", 20))
 
     entry1.place(
@@ -55,7 +93,7 @@ def confirm():
         width=200.0,
         height=47)
 
-    img0 = PhotoImage(file=r"Images\no.png")
+    img0 = PhotoImage(file=IMAGE_DIRECTORY+"no.png")
     b0 = Button(confirm_window,
                 image=img0,
                 command=no,
@@ -63,10 +101,10 @@ def confirm():
 
     b0.place(
         x=488, y=385,
-        width=152,
-        height=53)
+        width=BUTTON_WIDTH,
+        height=BUTTON_HEIGHT)
 
-    img1 = PhotoImage(file=r"Images\yes.png")
+    img1 = PhotoImage(file=IMAGE_DIRECTORY+"yes.png")
     b1 = Button(confirm_window,
                 image=img1,
                 command=yes,
@@ -74,10 +112,10 @@ def confirm():
 
     b1.place(
         x=207, y=385,
-        width=143,
-        height=53)
+        width=BUTTON_WIDTH,
+        height=BUTTON_HEIGHT)
 
-    background_img = PhotoImage(file=r"Images\background.png")
+    background_img = PhotoImage(file=IMAGE_DIRECTORY+"background.png")
     background = canvas.create_image(320.0, 179.5, image=background_img)
 
     confirm_window.resizable(False, False)
@@ -106,7 +144,7 @@ def order():
         ordered.update({key: 0 for key in menu if key not in ordered})
         ordered.update({"Total": total})
         labelbill = Label(order_window,
-                          bg='#B47950',
+                          bg=ORDCOL,
                           fg='#F5EEE9',
                           text="Rs" + str(total) + "/-",
                           font=("Cascadia Code", 30, "bold"))
@@ -119,11 +157,11 @@ def order():
     order_window = Toplevel()
     order_window.title("Billing Page")
     order_window.geometry("1152x700")
-    order_window.configure(bg="#b47950")
+    order_window.configure(bg=ORDCOL)
 
     canvas = Canvas(
         order_window,
-        bg="#b47950",
+        bg=ORDCOL,
         height=700,
         width=1152,
         bd=0,
@@ -131,28 +169,28 @@ def order():
         relief="ridge")
     canvas.place(x=0, y=0)
 
-    entry0 = Entry(order_window, bd=0, bg="#c4c4c4", highlightthickness=0)
+    entry0 = Entry(order_window, bd=0, bg=ORDENTRY, highlightthickness=0)
     entry0.place(x=1030, y=533, width=85, height=32)
 
-    entry1 = Entry(order_window, bd=0, bg="#c4c4c4", highlightthickness=0)
+    entry1 = Entry(order_window, bd=0, bg=ORDENTRY, highlightthickness=0)
     entry1.place(x=1030, y=393, width=85, height=33)
 
-    entry2 = Entry(order_window, bd=0, bg="#c4c4c4", highlightthickness=0)
+    entry2 = Entry(order_window, bd=0, bg=ORDENTRY, highlightthickness=0)
     entry2.place(x=1032, y=273, width=85, height=32)
 
-    entry3 = Entry(order_window, bd=0, bg="#c4c4c4", highlightthickness=0)
+    entry3 = Entry(order_window, bd=0, bg=ORDENTRY, highlightthickness=0)
     entry3.place(x=467, y=522, width=76, height=30)
 
-    entry4 = Entry(order_window, bd=0, bg="#c4c4c4", highlightthickness=0)
+    entry4 = Entry(order_window, bd=0, bg=ORDENTRY, highlightthickness=0)
     entry4.place(x=467, y=402, width=76, height=30)
 
-    entry5 = Entry(order_window, bd=0, bg="#c4c4c4", highlightthickness=0)
+    entry5 = Entry(order_window, bd=0, bg=ORDENTRY, highlightthickness=0)
     entry5.place(x=467, y=274, width=76, height=31)
 
     btn = Button(order_window, text="Order", font=(
         "Cascadia Code", 14, "bold"), command=confirm)
-    btn.place(x=940, y=665)
-    background_img = PhotoImage(file=r"Images\order_bg.png")
+    btn.place(x=940, y=665,height=BUTTON_HEIGHT,width=BUTTON_WIDTH)
+    background_img = PhotoImage(file=IMAGE_DIRECTORY+"order_bg.png")
     background = canvas.create_image(576.0, 523.5, image=background_img)
 
     order_window.after(1000, calculate)
@@ -166,10 +204,10 @@ def about():
     about_window = Toplevel()
     about_window.title("About")
     about_window.geometry("1152x700")
-    about_window.configure(bg="#f4fbfd")
+    about_window.configure(bg=CONCOL)
     canvas = Canvas(
         about_window,
-        bg="#f4fbfd",
+        bg=CONCOL,
         height=700,
         width=1152,
         bd=0,
@@ -177,7 +215,7 @@ def about():
         relief="ridge")
     canvas.place(x=0, y=0)
 
-    background_img = PhotoImage(file=r"Images\about_bg.png")
+    background_img = PhotoImage(file=IMAGE_DIRECTORY+"about_bg.png")
     background = canvas.create_image(
         586.5, 334.0,
         image=background_img)
@@ -191,10 +229,10 @@ def about():
 window = Tk()
 window.title("The Hideout")
 window.geometry("1152x700")
-window.configure(bg="#ffffff")
+window.configure(bg=WHITE)
 canvas = Canvas(
     window,
-    bg="#ffffff",
+    bg=WHITE,
     height=700,
     width=1152,
     bd=0,
@@ -202,12 +240,12 @@ canvas = Canvas(
     relief="ridge")
 canvas.place(x=0, y=0)
 
-background_img = PhotoImage(file=r"Images\main_bg.png")
+background_img = PhotoImage(file=IMAGE_DIRECTORY + "main_bg.png")
 background = canvas.create_image(
     576.0, 350.0,
     image=background_img)
 
-img0 = PhotoImage(file=r"Images\img0.png")
+img0 = PhotoImage(file=IMAGE_DIRECTORY+"img0.png")
 b0 = Button(
     image=img0,
     borderwidth=0,
@@ -217,10 +255,10 @@ b0 = Button(
 
 b0.place(
     x=603, y=213,
-    width=219,
-    height=62)
+    height=ABT_HEIGHT,
+    width=ABT_WIDTH)
 
-img1 = PhotoImage(file=r"Images\img1.png")
+img1 = PhotoImage(file=IMAGE_DIRECTORY+"img1.png")
 b1 = Button(
     image=img1,
     borderwidth=0,
@@ -230,8 +268,8 @@ b1 = Button(
 
 b1.place(
     x=603, y=322,
-    width=267,
-    height=62)
+    height=ORD_HEIGHT,
+    width=ORD_WIDTH)
 
 window.resizable(False, False)
 window.mainloop()
