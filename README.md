@@ -48,19 +48,15 @@ Please make sure to follow our contributing guidelines. For major changes, open 
 
 Here are some screenshots of The Hideout in action:
 
-![Screenshot 1](screenshots/screenshot1.png)
-*Caption for Screenshot 1*
 
-![Screenshot 2](screenshots/screenshot2.png)
-*Caption for Screenshot 2*
+![img-1 ss](image-1.png)
+
+![img-2 ss](image.png)
+
 
 ## Authors 🧑‍💻
 
-- K.om Senapati (@kom-senapati)
+
+[kom-senapati](@kom-senapati)
 
 Feel free to reach out if you have any questions or suggestions. Enjoy your time at The Hideout! 🌟
-```
-
-Replace `"Caption for Screenshot 1"` and `"Caption for Screenshot 2"` with actual captions for your screenshots. Additionally, make sure to place your screenshots in a folder named `screenshots` within your project directory and adjust the image paths accordingly in the README.
-
-You can also add more emojis and customize the README further as needed to reflect your project's unique features and style.
