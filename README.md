@@ -1,29 +1,64 @@
-# THE HIDEOUT
+# The Hideout 🏡
 
-Welcome to the Hideout, a place for people to come and hang out, talk about.
+Welcome to The Hideout, a cozy place for people to come and hang out, chat, and enjoy delicious beverages. ☕
 
-## How to run:
+## How to Run 🚀
 
-```bash
-git clone https://github.com/KOMNOOB/The-Hideout.git
-cd hideout
-python main.py
-```
+To run The Hideout, follow these steps:
 
-## How to contribute:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/kom-senapati/The-Hideout.git
+   cd The-Hideout
+   ```
 
-1. Fork the repo
-2. Create a new branch
-3. Make your changes
-4. Push to your branch
-5. Create a pull request
+2. Install tk module:
+   ```bash
+   pip install tk
+   ```
 
-## Contributing
+3. Run the main Python script:
+   ```bash
+   python main.py
+   ```
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## How to Contribute 🤝
 
-Please make sure to update tests as appropriate.
+We welcome contributions from the community! Here's how you can get involved:
 
-## Authors
+1. **Fork the Repository**: Click the "Fork" button at the top right of the repository's page.
 
-- K.om Senapati
+2. **Create a New Branch**: Create a new branch for your changes:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+3. **Make Your Changes**: Implement your enhancements, bug fixes, or new features.
+
+4. **Push to Your Branch**: Push your changes to your forked repository:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+
+5. **Create a Pull Request**: Open a pull request on the main repository and describe your changes. We'll review and merge your contribution.
+
+## Contributing Guidelines 📝
+
+Please make sure to follow our contributing guidelines. For major changes, open an issue first to discuss the proposed changes.
+
+## Screenshots 📷
+
+Here are some screenshots of The Hideout in action:
+
+
+![img-1 ss](image-1.png)
+
+![img-2 ss](image.png)
+
+
+## Authors 🧑‍💻
+
+
+[kom-senapati](@kom-senapati)
+
+Feel free to reach out if you have any questions or suggestions. Enjoy your time at The Hideout! 🌟
