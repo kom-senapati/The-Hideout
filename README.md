@@ -1,6 +1,3 @@
-Certainly! Here's an updated `readme.md` file for your Python project, "The Hideout," with emojis and placeholders for screenshots:
-
-```markdown
 # The Hideout 🏡
 
 Welcome to The Hideout, a cozy place for people to come and hang out, chat, and enjoy delicious beverages. ☕
@@ -15,7 +12,12 @@ To run The Hideout, follow these steps:
    cd The-Hideout
    ```
 
-2. Run the main Python script:
+2. Install tk module:
+   ```bash
+   pip install tk
+   ```
+
+3. Run the main Python script:
    ```bash
    python main.py
    ```
